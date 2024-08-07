@@ -4,7 +4,8 @@ from django.shortcuts import render
 def home (request):
     context = { #context variables created for use in our html template files
         'tumblr_url': 'https://madvillainn.tumblr.com',
-        'github_url': 'https://github.com/tazanaw0'
+        'github_url': 'https://github.com/tazanaw0',
+        'insta_url': 'https://instagram.com/madvillaiinn'
     }
     return render(request, 'home.html', context)
 #def socials (request):
