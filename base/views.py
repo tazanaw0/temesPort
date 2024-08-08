@@ -8,12 +8,15 @@ def home (request):
         'insta_url': 'https://instagram.com/madvillaiinn',
     }
     return render(request, 'home.html', context)
+#Album of candid photos 
 def candid(request):
     return render(request, 'candidPhotography.html')
 
+#Album of landscape photos
 def landscape(request):
     return render(request, 'landscapePhotography.html')
 
+#Album of street photos
 def street (request):
     return render(request, 'streetPhotography.html')
 
