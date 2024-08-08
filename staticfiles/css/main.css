@@ -7,9 +7,9 @@ body{
 #profile-pic{
     width:150px; 
     height:150px; 
-    border-radius: 50% 20% / 10% 40%;;
-    margin-left: auto;
+    border-radius: 50%; /* 50% 20% / 10% 40%; for square with curvy edges */
     margin-right: auto; 
+    margin-left: auto; 
 }
 ul{
     padding: 0;
