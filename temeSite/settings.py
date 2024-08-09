@@ -118,11 +118,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 # Allows us to import statics files dynamically with curly brackets {% load static %}
-STATIC_URL = 'staticfiles/'
-MEDIA_URL='img/' #Here's where we'll store all of our media files..
+STATIC_URL = '/staticfiles/' # Url to use when referencing static files
+#MEDIA_URL='img/' #Here's where we'll store all of our media files..
 STATICFILES_DIRS = [
      os.path.join(BASE_DIR, 'staticfiles')
 ]
+MEDIA_URL = '/media/' # URl to use when referring to media files (files uploaded by a user)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #Path to dir where media will be stored
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
