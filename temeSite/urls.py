@@ -15,10 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings #Module that allows us to 
+from django.conf.urls.static import static
 from django.urls import path, include
 #webserver decides which webpages should be delivered to the user.single quotes with blank space denote our default path (home) and since we want our app to handle our home page we call for our apps url configuration file. 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base.urls'))  #when the user is at our home page, django will refer to base.urls (our app urls config) to present content
 ]
+#serves media files during developmment
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
