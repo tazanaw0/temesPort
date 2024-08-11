@@ -10,17 +10,19 @@ def home (request):
     }
     return render(request, 'home.html', context)
 #Album of candid photos 
-def candid(request):
-    photos = Photo.objects.filter(category='candid') #variable defined to fetch and filter (object.filter() method) photos based on their category 
-    return render(request, 'candidPhotography.html', {'photos': photos})
+def portraits(request):
+    photos = Photo.objects.filter(category='portrait') #variable defined to fetch and filter (object.filter() method) photos based on their category 
+    return render(request, 'portraitPhotography.html', {'photos': photos})
 
 #Album of landscape photos
 def landscape(request):
-    return render(request, 'landscapePhotography.html')
+    photos = Photo.objects.filter(category='landscape')
+    return render(request, 'landscapePhotography.html', {'photos': photos})
 
 #Album of street photos
 def street (request):
-    return render(request, 'streetPhotography.html')
+    photos = Photo.objects.filter(category='street')
+    return render(request, 'streetPhotography.html', {'photos':photos})
 
 #def socials (request):
     #context = {
