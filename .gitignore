@@ -1,5 +1,7 @@
+#Ignores compiled files
 *.pyc
 __pycache__/
 base/__pycache__/
 temeSite/__pycache__/
+#Ignores Unwanted files
 .DS_Store
