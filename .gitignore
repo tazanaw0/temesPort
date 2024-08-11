@@ -1,3 +1,5 @@
-base/__pycache__/views.cpython-312.pyc
 *.pyc
-
+__pycache__/
+base/__pycache__/
+temeSite/__pycache__/
+.DS_Store
