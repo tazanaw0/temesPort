@@ -5,6 +5,7 @@ class Photo(models.Model):
 
  #Choices defined for our category field
     CATEGORY_CHOICES = [
+        ('iPhone', 'iPhone Photography'),
         ('portrait', 'Portrait Photography'),
         ('landscape', 'Landscape Photography'),
         ('street', 'Street Photography')
