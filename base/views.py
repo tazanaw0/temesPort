@@ -10,6 +10,10 @@ def home (request):
     }
     return render(request, 'home.html', context)
 #Album of candid photos 
+def iPhone(request):
+    photos = Photo.objects.filter(category='iPhone')
+    return render(request, 'iPhone.html', {'photos': photos})
+
 def portraits(request):
     photos = Photo.objects.filter(category='portrait') #variable defined to fetch and filter (object.filter() method) photos based on their category 
     return render(request, 'portraitPhotography.html', {'photos': photos})
