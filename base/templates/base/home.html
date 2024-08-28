@@ -17,6 +17,16 @@
         <img src="{%static 'img/fieldDay2.jpg'%}" alt="fieldDay2 flick">
         <img src="{%static 'img/fieldDay1.jpg'%}" alt="fieldDay1 flick">
         -->
+        <div class="container">
+            <div class="row">
+                <div class="col text-end">
+                    <audio controls loop> <!--Song auto plays when server gets(loads) this file and loops the audio-->
+                        <source src="{{ MEDIA_URL }}audio/background_music.mp3" type ="audio/mpeg">
+                        Your browser does not support the audio element. <!--Fallback text if song does't load-->
+                    </audio>
+                </div>
+            </div>
+        </div>
         <br>
         <div class="container"> <!--container class used to center everything!-->
             <div class="row">
@@ -110,6 +120,10 @@
             </div>
             <br>
         </div>
+        <audio autoplay loop> <!--Song auto plays when server gets(loads) this file and loops the audio-->
+            <source src="{{ MEDIA_URL }}audio/background_music.mp3" type ="audio/mpeg">
+            Your browser does not support the audio element. <!--Fallback text if song does't load-->
+        </audio>
     
     </body>
 </html>
